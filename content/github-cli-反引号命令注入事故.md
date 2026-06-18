@@ -2,8 +2,13 @@
 title: GitHub CLI 反引号命令注入事故
 description: 用 gh issue create --body 提交 Markdown 反引号内容时，shell 误把反引号里的 git 命令执行了，导致意外 force push
 type: troubleshooting
-tags: [github-cli, shell, git, security, 事故]
-updated: 2026-06-19 04:21:15
+tags:
+  - github-cli
+  - shell
+  - git
+  - security
+  - 事故
+updated: 2026-06-19 04:43:01
 created: 2026-06-19 04:21:15
 ---
 
