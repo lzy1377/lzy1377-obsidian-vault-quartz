@@ -1,0 +1,18 @@
+views:
+  - type: table
+    name: 表格
+    filters:
+      and:
+        - file.inFolder("笔记")
+        - and:
+            - file.hasProperty("title")
+    order:
+      - file.name
+      - description
+      - tags
+      - type
+      - created
+      - updated
+    sort:
+      - property: file.name
+        direction: ASC
