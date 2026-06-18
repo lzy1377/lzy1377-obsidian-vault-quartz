@@ -5,8 +5,7 @@ views:
       and:
         - file.inFolder("笔记")
         - file.ext.containsAll("md")
-        - and:
-            - file.hasProperty("title")
+        - '!file.name.contains("index")'
     order:
       - file.name
       - description
