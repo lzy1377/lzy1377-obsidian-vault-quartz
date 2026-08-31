@@ -1,12 +1,12 @@
 ---
 title: windows强制删除
-description:
+description: windows强制删除指定目录
 type: note
 tags:
   - windows
   - 删除
   - 卸载
-updated: 2026-07-21 23:30:00
+updated: 2026-08-31 13:53:31
 created: 2026-07-01 09:25:22
 ---
 
