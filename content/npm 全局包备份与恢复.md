@@ -10,7 +10,7 @@ tags:
   - 恢复
   - 安装
   - 包管理
-updated: 2026-06-08 19:36:17
+updated: 2026-08-31 12:39:49
 created: 2026-02-26 15:27:36
 ---
 
@@ -18,6 +18,9 @@ created: 2026-02-26 15:27:36
 #备份
 npm list -g --depth=0 > global-packages.txt
 
-#恢复
+#恢复 (npm version<12)
 (gc global-packages.txt | select -skip 1) -replace '^[+|`]-- ' -replace '@[\d.]+$' | ? { $_ -and $_ -ne 'npm' -and $_ -ne 'corepack' } | % { npm i -g $_ }
+
+#恢复 (npm version>12)
+(gc global-packages.txt | select -skip 1) -replace '^[+|`]-- ' -replace '@[\d.]+$' | ? { $_ -and $_ -ne 'npm' -and $_ -ne 'corepack' } | % { npm i -g $_ --dangerously-allow-all-scripts }
 ```
