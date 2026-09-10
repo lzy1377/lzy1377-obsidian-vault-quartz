@@ -7,7 +7,7 @@ tags:
   - 安全
   - 供应链安全
   - node
-updated: 2026-08-21 11:11:27
+updated: 2026-09-07 23:30:39
 created: 2026-08-21 11:04:48
 ---
 # npm 12 生命周期脚本安全策略（allowScripts）
@@ -25,12 +25,12 @@ npm 12（2026-07-08 发布）默认阻止所有依赖包的生命周期脚本（
 
 ## 怎么做
 
-| 你的需求 | 命令 | 推荐度 |
-| --- | --- | --- |
-| 彻底回到 npm 11 行为 | `--dangerously-allow-all-scripts` 或 `.npmrc` | ⭐ 极低，只用于紧急迁移 |
-| 一次性批准当前所有包 | `npm approve-scripts --all` | ⭐⭐ 低，图省事但失去审查 |
-| 逐个审批已知包 | `npm approve-scripts sharp esbuild ...` | ⭐⭐⭐⭐⭐ 推荐 |
-| 查看待审批列表 | `npm approve-scripts --allow-scripts-pending` | ⭐⭐⭐⭐⭐ 推荐 |
+| 你的需求           | 命令                                            | 推荐度           |
+| -------------- | --------------------------------------------- | ------------- |
+| 彻底回到 npm 11 行为 | `--dangerously-allow-all-scripts` 或 `.npmrc`  | ⭐ 极低，只用于紧急迁移  |
+| 一次性批准当前所有包     | `npm approve-scripts --all`                   | ⭐⭐ 低，图省事但失去审查 |
+| 逐个审批已知包        | `npm approve-scripts sharp esbuild ...`       | ⭐⭐⭐⭐⭐ 推荐      |
+| 查看待审批列表        | `npm approve-scripts --allow-scripts-pending` | ⭐⭐⭐⭐⭐ 推荐      |
 
 ### 1. 查看待审批包列表
 
